@@ -84,14 +84,14 @@ body {
     .content-left {
       flex: 1;
       .personal-info-bar {
-        padding-bottom: 10px;
+        padding-bottom: 50px;
         margin: 0 30px 50px;
         background-color: $body-background;
         width: 27%;
         @include flex("");
         flex-direction: column;
         gap: 20px;
-        padding: 0 50px 20px 50px;
+        padding: 0 50px 700px 50px;
         border-top-left-radius: 110px;
         border-top-right-radius: 110px;
         p {
@@ -171,7 +171,7 @@ body {
         }
         .info-social {
           @extend %info;
-          margin-top: 30px;
+          margin-top: 50px;
           .h {
             @extend %h;
             font-size: $font-size + 5px;
@@ -285,78 +285,22 @@ body {
         }
       }
       .middle-content-right-2 {
-        display: flex;
         margin: 40px -150px 0 20px;
-        .col-1 {
-          flex: 1;
-          .border-line {
-            @extend %borderline;
-            border-bottom: 0px;
-            display: flex;
-            h2 {
-              @extend %border-h2;
-            }
-          }
-          .col-1-1 {
-            flex: 1;
-            margin-left: 20px;
-          }
-          .col-1-2 {
-            flex: 1;
-            margin-left: -200px;
-          }
-          .rating {
-            display: inline-block;
-            margin-right: -40px;
-            li {
-              margin-bottom: 28px;
-              list-style: none;
-            }
-          }
-          .background {
-            width: 10px;
-            height: 10px;
-            border: 1px solid black;
-            border-top-left-radius: 5px;
-            border-bottom-left-radius: 5px;
-            border-top-right-radius: 5px;
-            border-bottom-right-radius: 5px;
-            background-color: $body-background;
-          }
-          .no-background {
-            background-color: $base-color;
-          }
-        }
-        .col-2 {
-          flex: 1;
-          margin-left: -20px;
-          .border-line {
-            display: flex;
-            @extend %borderline;
-            border-bottom: 0px;
-            h2 {
-              @extend %border-h2;
-            }
-            .col-list-icon {
-              flex: 1;
-              margin-top: 10px 0 0 20px;
-              margin-left: -20px;
-              i {
-                display: block;
-                width: 50px;
-                height: 50px;
-                color: #565656;
-              }
-            }
-            .col-info-project {
-              flex: 1;
-              margin-left: -330px;
-              h2 {
-                text-transform: uppercase;
-              }
-              p {
-                margin: 25px 0 25px 20px;
-                text-transform: $transform-text;
+        .border-line {
+          @extend %borderline;
+          border-bottom: 0px;
+          display: inline-block;
+          width: 700px;
+          display: grid;
+          grid-template-columns: repeat(2,1fr);
+          h2 {
+            @extend %border-h2;
+            margin: -15px 0 0 20px;
+            text-transform: uppercase;
+            .content {
+              .title-project {
+                font-size: 14px;
+                color: #0184b8;
               }
             }
           }
@@ -367,119 +311,38 @@ body {
 }
 .bottom-content-right {
 	display: flex;
-  margin: 40px -150px 20px;
-	.col-1 {
-		flex: 1;
+  margin: 40px -150px 15px;
 		.border-line {
 			h2 {
 				@extend %border-h2;
-        width: 600px;
+        width: 900px;
         text-transform: uppercase;
 			}
 			@extend %borderline;
       border-bottom: 0px;
-      margin: -50px 0 0 120px;
-      padding-bottom: 0;
-      .rate-language {
-        margin-left: -20px;
-        li {
-          width: 30px;
-          height: 30px;
-          border: 1px solid black;
-          border-top-left-radius: 15px;
-          border-bottom-left-radius: 15px;
-          border-top-right-radius: 15px;
-          border-bottom-right-radius: 15px;
-          margin-bottom: 20px;
-          p {
-            text-align: center;
-            margin-top: 5px;
-          }
-        }
+      margin: -50px 0 0 -85px;
+      h5 {
+        color: $main-color;
       }
+      p {
+        font-size: 14px;
+        margin-right: 1px;
+      }
+      width: 900px;
+      padding: 25px 25px 0;
     }
-	}
-	.col-2 {
-		flex: 1;
-		.border-line {
-			h2 {
-				@extend %border-h2;
-				text-transform: uppercase;
-			}
-			@extend %borderline;
-      border-bottom: 0px;
-      margin: -50px 0 0 -100px;
-		}
-	}
 }
-.rate-language {
-	.rate {
-		li {
-			p {
-				text-align: center;
-				margin-top: 5px;
-			}
-			margin-bottom: 20px;
-		}
-	}
-}
-.name-language {
-	margin-left: 30px;
-	p {
-		margin-bottom: 37px;
-		text-transform: uppercase;
-	}
-}
-.col-2 {
-	.grid-hobbies {
-		display: grid;
-		grid-template-columns: repeat(3,1fr);
-		gap: 40px;
-    margin: 20px 0 0 20px;
-		.activity {
-			display: flex;
-			margin-top: 10px;
-			margin-bottom: -5px;
-			margin-right: -10px;
-			i {
-				margin-top: -5px;
-				color: #565656;
-			}
-			p {
-				margin-left: 20px;
-				margin-top: -5px;
-				font-size: 0.6rem;
-				text-transform: uppercase;
-			}
-		}
-	}
-}
+
 .bottom-content-right {
   padding-top: 50px;
 }
-.content-footer {
-	display: flex;
-	margin-left: 35px;
-	.footer-content-left {
-		flex: 1;
-		p {
-			font-size: 1.3rem;
-			text-transform: $transform-text;
-			margin-top: -15px;
-			font-weight: bold;
-			color: $body-background;
-		}
-	}
-	.footer-content-right {
-		width: 150px;
-		flex: 4;
-		.container-icon {
-			margin-left: 5px;
-			margin-top: -10px;
-			i {
-				padding-right: 15px;
-				color: #565656;
-			}
-		}
-	}
+footer {
+	background-color: $main-color;
+	color: white;
+	text-align: center;
+	padding: 10px 20px;
+  text-align: center;
+}
+footer > a {
+	color: white;
 }
